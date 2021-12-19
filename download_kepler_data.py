@@ -6,11 +6,11 @@ from parse import parse
 from tqdm import tqdm
 
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description=
+        'Download fits files for all kepler objects found in the TCE file.')
 
 parser.add_argument("--csv", type=str, required=True)
-parser.add_argument("--download_dir", type=str, required=True)
-parser.add_argument("--output_file", type=str, default="get_kepler.sh")
+parser.add_argument("--download-dir", type=str, required=True)
 args = parser.parse_args()
 
 
